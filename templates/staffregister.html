@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block title %}LogIn Here{% endblock title %}
+
+{% block body %}
+<div class="container-fluid px-0 mb-3">
+    <img src="https://source.unsplash.com/1600x400/?phone,contact" class="d-block w-100 " alt="...">
+    
+</div
+<div class="container-fluid py-4 mb-3">
+    <h1 class="text-center">Registration Form</h1>
+    <h3 class="text-center">Only For Teachers</h3>
+    <form method="post" action="staffregister">
+    {% csrf_token %} 
+        <div class="from-group mb-3 px-50">
+            <label for="name" >First_Name</label>
+            <input type="text" class="form-control" id="name" name="first_name" placeholder="Enter Your Name :">
+            <div id="nameHelp" class="form-text">We'll never share your details with anyone else.</div>
+        </div>
+
+        <div class="from-group mb-3 px-50">
+            <label for="name" >Last_Name</label>
+            <input type="text" class="form-control" id="name" name="last_name" placeholder="Enter Your Name :">
+            <div id="nameHelp" class="form-text">We'll never share your details with anyone else.</div>
+        </div>
+
+        <div class="from-group mb-3 px-50">
+            <label for="name" >Username</label>
+            <input type="text" class="form-control" id="name" name="username" placeholder="Enter Your Name :">
+            <div id="nameHelp" class="form-text">We'll never share your details with anyone else.</div>
+        </div>
+
+        <div class="from-group mb-3 px-50">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp"
+                placeholder="Enter Your Email Address:">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+
+        <div class="from-group mb-3 px-50">
+            <label for="password" class="form-label">Password 1</label>
+            <input type="password" class="form-control" id="exampleInputpassword" name="password1" aria-describedby="passwordHelp"
+                placeholder="create your password">
+            <div id="passwordHelp" class="form-text">We'll never share your password with anyone else.</div>
+        </div>
+
+        <div class="from-group mb-3 px-50">
+            <label for="password" class="form-label">Password 2</label>
+            <input type="password" class="form-control" id="exampleInputpassword" name="password2" aria-describedby="passwordHelp"
+                placeholder="write your password">
+            <div id="passwordHelp" class="form-text">We'll never share your password with anyone else.</div>
+        </div>
+
+        <div class="from-group mb-3 px-50 form-check ">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary ">Submit</button><br>
+           
+    </form>
+    </div>
+
+    <div>
+            {% for message in messages %}
+            <h3 class="text-center"> {{message}} </h3>
+            {% endfor %}
+    </div>
+</div>
+<div class="container text-center">
+    <div class="contactInfo">
+        <div class="box">
+            <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+            <div class="text">
+                <h2>Address</h2>
+                <p>Julana,Jind,Pincode-126114,Haryana</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+            <div class="text">
+                <h2>Phone</h2>
+                <p>+918053182967</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+            <div class="text">
+                <h2>Email</h2>
+                <p>ankitbadgujar78@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+<div class="container-fluid my-4">
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://source.unsplash.com/1600x900/?building,school" class="d-block w-100" alt="..." height=700 width=100>
+      <div class="carousel-caption d-none d-md-block">
+        <h1>ABC School</h1>
+        <p> Adress ABC School</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://source.unsplash.com/1600x900/?school,water" class="d-block w-100" alt="..." height=700 width=100>
+      <div class="carousel-caption d-none d-md-block">
+        <h1>ABC School</h1>
+        <p> Adress ABC School</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://source.unsplash.com/1600x900/?nature,school"  class="d-block w-100" alt="..." height=700 width=100>
+      <div class="carousel-caption d-none d-md-block">
+        <h1>ABC School</h1>
+        <p> Adress ABC School</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-show">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-show">Next</span>
+  </a>
+</div>
+</div>
+
+<div class="container my-3">
+<h1 class="my-2 text-center"> ABC School</h1>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="/static/Image/photo 1.jpeg" class="d-block w-100" alt="..." height=600 width=100>
+            <div class="card-body">
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="/static/Image/photo 26.jpeg" class="d-block w-100" alt="..." height=600 width=100>
+            <div class="card-body">
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="/static/Image/photo 9.jpeg" class="d-block w-100" alt="..." height=600 width=100>
+            <div class="card-body">
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="/static/Image/photo 10.jpeg" class="d-block w-100" alt="..." height=600 width=100>
+            <div class="card-body">
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="/static/Image/photo 11.jpeg" class="d-block w-100" alt="..." height=600 width=100>
+            <div class="card-body">
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="/static/Image/photo 12.jpeg"  class="d-block w-100" alt="..." height=600 width=100>
+            <div class="card-body">
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>  
+      </div>
+</div>
+
+
+
+
+<div class="container-fluid text-center">
+  <a href="/about" class="btn btn-outline-next btn-dark " role="button"> Next</a>
+</div>
+
+
+
+<div class="container text-center">
+    <div class="contactInfo">
+        <div class="box">
+            <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+            <div class="text">
+                <h2>Address</h2>
+                <p>Julana,Jind,Pincode-126114,Haryana</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+            <div class="text">
+                <h2>Phone</h2>
+                <p>+918053182967</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+            <div class="text">
+                <h2>Email</h2>
+                <p>ankitbadgujar78@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

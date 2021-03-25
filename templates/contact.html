@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+<div class="container-fluid px-0 mb-3">
+    <img src="https://source.unsplash.com/1600x400/?phone,contact" class="d-block w-100 my-4" alt="...">
+    
+</div>
+<div class="container-fluid py-4 mb-3">
+    <h1 class="text-center">Contact Us </h1>
+    <form method="post" action="/contact">
+    {% csrf_token %} 
+        <div class="from-group mb-3 px-50">
+            <label for="name" >Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name :">
+            <div id="nameHelp" class="form-text">We'll never share your details with anyone else.</div>
+        </div>
+
+        <div class="from-group mb-3 px-50">
+            <label for="phonenumber" class="form-label">Phone Number</label>
+            <input type="phone" class="form-control" id="phonenumber" name="phone" aria-describedby="phoneHelp"
+                placeholder="Enter Your Phone Number:">
+            <div id="phoneHelp" class="form-text">We'll never share your phone number with anyone else.</div>
+        </div>
+
+        <div class="from-group mb-3 px-50">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp"
+                placeholder="Enter Your Email Address:">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+
+        <div class="from-group mb-3 px-50">
+            <label for="desc" class="form-label">Tell me about what you want to contact me for ...</label>
+            <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+        </div>
+
+        <div class="from-group mb-3 px-50 form-check ">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary ">Submit</button>
+    </form>
+</div>
+<div class="container text-center">
+    <div class="contactInfo">
+        <div class="box">
+            <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+            <div class="text">
+                <h2>Address</h2>
+                <p>Julana,Jind,Pincode-126114,Haryana</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+            <div class="text">
+                <h2>Phone</h2>
+                <p>+918053182967</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+            <div class="text">
+                <h2>Email</h2>
+                <p>ankitbadgujar78@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

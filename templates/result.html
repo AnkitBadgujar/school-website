@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Result{% endblock title %}
+
+{% block body %}
+<div class="container-fluid px-0 mb-3">
+    <img src="https://source.unsplash.com/1600x400/?result,class" class="d-block w-100 my-4" alt="...">
+    
+</div>
+<div class="container-fluid py-4 mb-3">
+    <h1 class="text-center"> Result </h1>
+    <form method="post" action="/result">
+    {% csrf_token %} 
+        <div class="from-group mb-3 px-50">
+            <label for="name" >Class</label>
+            <input type="text" class="form-control" id="name" name="classname" placeholder="Enter class :">
+        </div>
+
+        <div class="from-group mb-3 px-50">
+            <label for="name" class="form-label">Subject</label>
+            <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter subject:">  
+        </div>
+
+        <div class="from-group mb-3 px-50">
+            <label for="file" class="form-label">Result file</label>
+            <input type="File" class="form-control" id="file" name="resultfile" placeholder="Enter subject:">  
+        </div>
+
+
+        <button type="submit" class="btn btn-primary ">Submit</button>
+    </form>
+
+{% endblock body %}
